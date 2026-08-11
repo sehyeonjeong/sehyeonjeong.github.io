@@ -5,6 +5,7 @@ export default function Header() {
         <a className="logo" href="#top" aria-label="AfreSH 홈">AfreSH<span>.</span></a>
         <nav className="socials" aria-label="연락처">
           <a href="https://github.com/sehyeonjeong" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://velog.io/@sehyeonjeong/posts" target="_blank" rel="noreferrer">Velog</a>
           <a href="mailto:AfreSH@AfreSH.page">Email</a>
         </nav>
       </div>
