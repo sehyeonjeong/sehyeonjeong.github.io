@@ -4,7 +4,15 @@ export default function About() {
   return (
     <section className="section about" id="about">
       <div className="shell about__grid">
-        <img className="profile" src={imageUrl('apple-profile-image.jpeg')} alt="정세현 프로필" />
+        <img
+          className="profile"
+          src={imageUrl('profile.webp')}
+          alt="정세현 프로필"
+          width="420"
+          height="420"
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <p className="eyebrow">ABOUT</p>
           <h2>복잡한 요구를<br />자연스러운 화면으로.</h2>

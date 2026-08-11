@@ -1,4 +1,4 @@
-const ASSET_BASE = 'https://raw.githubusercontent.com/sehyeonjeong/sehyeonjeong.github.io/main/images'
+const ASSET_BASE = '/images'
 
 export const imageUrl = (path) => `${ASSET_BASE}/${path}`
 
@@ -51,7 +51,9 @@ export const works = [
   {
     title: '신한금융그룹',
     description: '신한금융그룹 웹사이트 구축 프로젝트에서 주요 콘텐츠 영역의 퍼블리싱과 인터랙션 구현을 담당했습니다.',
-    image: 'work/shinhan.png',
+    image: 'work/shinhan.webp',
+    imageWidth: 1600,
+    imageHeight: 775,
     href: 'https://www.shinhangroup.com/kr/main',
     period: 'Git 활동 확인 2024.04.25—06.18',
     role: '주요 콘텐츠 영역 퍼블리싱 · 인터랙션 구현',
@@ -65,7 +67,9 @@ export const works = [
   {
     title: '등기통',
     description: '주소 검색부터 부동산 공부 선택, 열람 동의·결제, 마이페이지까지 이어지는 부동산 문서 발급 서비스의 반응형 UI를 퍼블리싱했습니다.',
-    image: 'work/deunggitong.jpg',
+    image: 'work/deunggitong.webp',
+    imageWidth: 1600,
+    imageHeight: 1067,
     href: 'https://www.afresh.page/DGT',
     role: '전 화면 퍼블리싱 · UI 인터랙션 구현',
     highlights: [
@@ -78,7 +82,9 @@ export const works = [
   {
     title: '2019 연희걷다 | 연연백화점',
     description: '연희·연남동의 약 100개 상점과 크리에이터 정보를 5개 주제관으로 구성한 로컬 페스티벌 웹사이트를 반응형으로 퍼블리싱했습니다.',
-    image: 'work/yeonhui-festival-1600.jpg',
+    image: 'work/yeonhui-festival.webp',
+    imageWidth: 1600,
+    imageHeight: 1067,
     href: 'https://www.afresh.page/yeonhui-festival',
     role: '행사 웹사이트 전 화면 퍼블리싱',
     highlights: [
