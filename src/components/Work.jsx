@@ -23,14 +23,16 @@ export default function Work() {
           {works.map((work) => (
             <SwiperSlide key={work.title}>
               <article className="work-card">
-                <img
-                  src={imageUrl(work.image)}
-                  alt={`${work.title} 프로젝트 화면`}
-                  width={work.imageWidth}
-                  height={work.imageHeight}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className={`work-card__media${work.imageFit === 'contain' ? ' is-contained' : ''}`}>
+                  <img
+                    src={imageUrl(work.image)}
+                    alt={`${work.title} 프로젝트 화면`}
+                    width={work.imageWidth}
+                    height={work.imageHeight}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div className="work-card__body">
                   <div>
                     {work.period && <p className="work-card__period">{work.period}</p>}
