@@ -25,25 +25,3 @@ export const works = [
     skills: ['퍼블리싱 100%', 'HTML', 'CSS', 'jQuery', '반응형'],
   },
 ]
-
-export const designs = [
-  ['3minutevitality.jpg', '상세페이지 — 금단미인 3초활력'],
-  ['ganbojima.jpg', '상세페이지 — 금단미인 간보지마'],
-  ['ssopalpalpal.jpg', '상세페이지 — 금단미인 쏘팔팔팔'],
-  ['vitaminmineral.jpg', '상세페이지 — 금단미인 비타민미네랄'],
-  ['postbiotics.jpg', '상세페이지 — 금단미인 포스트바이오틱스'],
-  ['maxomega.jpg', '상세페이지 — 금단미인 맥스오메가'],
-  ['propolis.jpg', '상세페이지 — 금단미인 프로폴리스'],
-  ['chaumcollagen.jpg', '상세페이지 — 금단미인 채움콜라겐'],
-  ['dietgueb.jpg', '상세페이지 — 금단미인 다이어트 급'],
-  ['goong.jpg', '상세페이지 — 금단미인 궁'],
-  ['j_one_diethwan_SPEC_old.jpg', '상세페이지 — 청춘제당 다이어트 환'],
-  ['nokyongtheblack_new.jpg', '상세페이지 — 금단미인 녹용더블랙'],
-  ['metaliica-poster.png', "포스터 — I MET 'TALLICA"],
-  ['sewoon-poster.png', '포스터 — 세운상가에서 놀자'],
-  ['dosisi01.png', '포스터 — 도시시 북토크 01'],
-  ['dosisi02.png', '포스터 — 도시시 북토크 02'],
-  ['one_envelope.png', '인쇄디자인 — 원교재사 대봉투'],
-  ['one-shoping.png', '인쇄디자인 — 원교재사 쇼핑백'],
-  ['printx-styleguide.jpg', '스타일가이드 — PRINTX'],
-].map(([file, title]) => ({ image: `design/${file}`, title }))
