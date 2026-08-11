@@ -1,0 +1,46 @@
+.about {
+  display: grid;
+  align-items: center;
+  background: var(--surface);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 340px) 1fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+  }
+}
+
+.profile {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: .82;
+  filter: grayscale(1);
+  transform: scale(.985);
+  transition:
+    filter 1.2s ease,
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(.22, 1, .36, 1);
+
+  &.is-visible {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1);
+  }
+}
+
+.copy {
+  max-width: 48rem;
+  margin: 2rem 0;
+  color: #d6d6d6;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+  word-break: keep-all;
+
+  p + p {
+    margin-top: 1rem;
+  }
+}

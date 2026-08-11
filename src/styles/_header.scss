@@ -1,0 +1,42 @@
+@use 'tokens' as *;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: $header-height;
+  background: linear-gradient(#202020, transparent);
+
+  &__inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+
+.logo span,
+em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.socials {
+  display: flex;
+  gap: 1.25rem;
+  font-size: .85rem;
+  font-weight: 700;
+
+  a {
+    &:hover,
+    &:focus-visible {
+      color: var(--accent);
+    }
+  }
+}
