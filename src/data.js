@@ -54,6 +54,7 @@ export const works = [
     image: 'work/shinhan.webp',
     imageWidth: 1600,
     imageHeight: 775,
+    imageFit: 'contain',
     href: 'https://www.shinhangroup.com/kr/main',
     period: 'Git 활동 확인 2024.04.25—06.18',
     role: '주요 콘텐츠 영역 퍼블리싱 · 인터랙션 구현',
