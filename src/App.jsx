@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { designs, imageUrl, works } from './data.js'
+import { imageUrl, works } from './data.js'
 
 function useTyping(text, delay = 95) {
   const [typed, setTyped] = useState('')
@@ -111,54 +111,6 @@ function Work() {
   )
 }
 
-function DesignModal({ design, onClose }) {
-  useEffect(() => {
-    if (!design) return undefined
-    const closeOnEscape = (event) => event.key === 'Escape' && onClose()
-    document.body.classList.add('modal-open')
-    window.addEventListener('keydown', closeOnEscape)
-    return () => {
-      document.body.classList.remove('modal-open')
-      window.removeEventListener('keydown', closeOnEscape)
-    }
-  }, [design, onClose])
-
-  if (!design) return null
-  return (
-    <div className="modal" role="dialog" aria-modal="true" aria-label={design.title} onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <div className="modal__window">
-        <div className="modal__header">
-          <h2>{design.title}</h2>
-          <button type="button" onClick={onClose} aria-label="닫기">×</button>
-        </div>
-        <img src={imageUrl(design.image)} alt={design.title} />
-      </div>
-    </div>
-  )
-}
-
-function Design() {
-  const [selected, setSelected] = useState(null)
-  return (
-    <section className="section design" id="design">
-      <div className="shell">
-        <p className="eyebrow">VISUAL ARCHIVE</p>
-        <h2>Design.</h2>
-        <ul className="design-grid">
-          {designs.map((design) => (
-            <li key={design.image}>
-              <button type="button" onClick={() => setSelected(design)} aria-label={`${design.title} 크게 보기`}>
-                <img loading="lazy" src={imageUrl(design.image)} alt={design.title} />
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <DesignModal design={selected} onClose={() => setSelected(null)} />
-    </section>
-  )
-}
-
 function Footer() {
   return (
     <footer className="footer">
@@ -171,5 +123,5 @@ function Footer() {
 }
 
 export default function App() {
-  return <><Header /><main><Hero /><About /><Work /><Design /></main><Footer /></>
+  return <><Header /><main><Hero /><About /><Work /></main><Footer /></>
 }

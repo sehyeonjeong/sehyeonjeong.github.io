@@ -12,7 +12,6 @@ npm run dev
 ## 구성
 
 - 섹션별 React 컴포넌트
-- React 상태 기반 디자인 갤러리 모달
 - Swiper React 기반 프로젝트 슬라이더
 - 반응형 레이아웃과 reduced-motion 지원
 - GitHub Pages 사용자 도메인을 위한 `public/CNAME`
