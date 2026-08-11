@@ -1,13 +1,15 @@
 import useTyping from '../hooks/useTyping.js'
+import usePointerParallax from '../hooks/usePointerParallax.js'
 
 const HERO_TITLE = 'JEONG\nSEHYEON.'
 
 export default function Hero() {
   const typed = useTyping(HERO_TITLE)
+  const heroRef = usePointerParallax()
   const isTypingComplete = typed === HERO_TITLE
 
   return (
-    <section className="hero" id="top">
+    <section ref={heroRef} className="hero" id="top">
       <div className="shell hero__inner">
         <h1 className={`hero__title${isTypingComplete ? ' is-complete' : ''}`} aria-label="정세현 프론트엔드 UI 포트폴리오">
           {typed.split('\n').map((line, index) => <span key={`${line}-${index}`}>{line}</span>)}
