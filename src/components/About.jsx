@@ -1,11 +1,39 @@
+import { useEffect, useRef, useState } from 'react'
 import { imageUrl } from '../data.js'
 
 export default function About() {
+  const profileRef = useRef(null)
+  const [isProfileVisible, setIsProfileVisible] = useState(false)
+
+  useEffect(() => {
+    const profile = profileRef.current
+
+    if (!profile || !('IntersectionObserver' in window)) {
+      setIsProfileVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsProfileVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.35, rootMargin: '0px 0px -10% 0px' },
+    )
+
+    observer.observe(profile)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="section about" id="about">
       <div className="shell about__grid">
         <img
-          className="profile"
+          ref={profileRef}
+          className={`profile${isProfileVisible ? ' is-visible' : ''}`}
           src={imageUrl('profile.webp')}
           alt="정세현 프로필"
           width="420"
