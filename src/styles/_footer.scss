@@ -1,0 +1,22 @@
+.footer {
+  background: #525252;
+
+  &__inner {
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+    justify-content: space-between;
+
+    > a {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    p {
+      color: #ddd;
+      font-size: .8rem;
+      line-height: 1.6;
+      text-align: right;
+    }
+  }
+}

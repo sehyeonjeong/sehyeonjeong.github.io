@@ -1,0 +1,62 @@
+@use 'tokens' as *;
+
+.shell {
+  width: min($content-width, calc(100% - 96px));
+  margin-inline: auto;
+}
+
+.section {
+  min-height: 100svh;
+  padding-block: clamp(6rem, 10vw, 10rem);
+
+  h2 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    letter-spacing: -.055em;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.button {
+  display: inline-flex;
+  min-width: 180px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem 2rem;
+  border-radius: 999px;
+  background: rgba(187, 134, 252, .22);
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(187, 134, 252, .38);
+    transform: translateY(-2px);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: .35rem .7rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: .75rem;
+  }
+}
