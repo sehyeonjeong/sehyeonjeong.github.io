@@ -42,7 +42,6 @@ export default function About() {
           decoding="async"
         />
         <div>
-          <p className="eyebrow">ABOUT</p>
           <h2>복잡한 요구를<br />자연스러운 화면으로.</h2>
           <div className="copy">
             <p>안녕하세요. 웹 디자인·운영과 금융권 UI 구축 경험을 기반으로 React·TypeScript 서비스 개발까지 업무 범위를 확장해 온 약 10년 경력의 프론트엔드 UI 실무자 정세현입니다.</p>
