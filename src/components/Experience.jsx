@@ -6,7 +6,6 @@ export default function Experience() {
       <div className="shell">
         <div className="experience__heading">
           <div>
-            <p className="eyebrow">SELECTED EXPERIENCE</p>
             <h2>Experience.</h2>
           </div>
           <p>2023년부터 미디어포스 얼라이언스 소속으로 금융권 고객사 프로젝트를 수행하고 있으며, 별도 외주 프로젝트를 통해 프론트엔드 기능 개발 경험을 확장하고 있습니다.</p>

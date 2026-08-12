@@ -9,7 +9,6 @@ export default function Work() {
   return (
     <section className="section work" id="work">
       <div className="shell">
-        <p className="eyebrow">PUBLIC WORK</p>
         <h2>Public Work.</h2>
         <Swiper
           className="work-slider"

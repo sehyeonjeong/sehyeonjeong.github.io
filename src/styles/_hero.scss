@@ -1,24 +1,12 @@
 @use 'tokens' as *;
 
 .hero {
-  --hero-parallax-x: 0px;
-  --hero-parallax-y: 0px;
   position: relative;
   display: grid;
   min-height: 100svh;
   place-items: center;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -2rem;
-    background:
-      radial-gradient(circle at 78% 25%, rgba(187, 134, 252, .18), transparent 34%),
-      linear-gradient(135deg, #272727, #171717);
-    transform: translate3d(var(--hero-parallax-x), var(--hero-parallax-y), 0);
-    will-change: transform;
-  }
+  background: #1b1b1b;
 
   &__inner {
     position: relative;
@@ -37,7 +25,7 @@
     font-size: clamp(4.5rem, 12vw, 10.5rem);
     font-weight: 900;
     line-height: .82;
-    letter-spacing: -.075em;
+    letter-spacing: -.04em;
   }
 
   &__title-line {
@@ -72,7 +60,6 @@
   }
 
   &__button--secondary {
-    border: 1px solid rgba(187, 134, 252, .55);
     background: transparent;
   }
 }
