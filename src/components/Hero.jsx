@@ -23,9 +23,11 @@ export default function Hero() {
           ))}
         </h1>
         <div className="hero__intro">
+          <p className="hero__eyebrow">Frontend UI Developer</p>
           <ul className="identity">
-            <li className="identity__role">10 years in Web UI · Frontend UI Developer</li>
-            <li className="identity__skills">Web Publishing · React · TypeScript</li>
+            <li className="identity__role">10 years in Web UI</li>
+            <li className="identity__skills">Now building with Next.js · React · TypeScript</li>
+            <li className="identity__foundation">Accessible UI · Responsive Web · Interaction</li>
           </ul>
           <div className="hero__actions">
             <a className="button" href="#experience">Experience 보기</a>

@@ -34,6 +34,10 @@ em {
   font-weight: 700;
 
   a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+
     &:hover,
     &:focus-visible {
       color: var(--accent);

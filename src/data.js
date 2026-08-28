@@ -4,22 +4,24 @@ export const imageUrl = (path) => `${ASSET_BASE}/${path}`
 
 export const experiences = [
   {
-    period: '2026.04.03—현재',
-    title: '하나은행 고도화',
-    context: '미디어포스 얼라이언스 · 고객사 파견',
-    label: 'FINANCE · CONFIDENTIAL',
-    description: 'React·TypeScript 환경에서 기존 공통 컴포넌트를 활용해 메인 홈과 보이스피싱 피해 서류 제출 페이지를 구현했습니다.',
-    highlights: ['페이지 단위 클라이언트 요청 반영', '금융 UI 가이드·웹 접근성·반응형 기준 준수'],
-    skills: ['React', 'TypeScript', 'SCSS', '웹 접근성', '반응형'],
-  },
-  {
     period: '2025.10.22—현재',
     title: 'STRAS 주문 서비스',
     context: '외주 프로젝트',
     label: 'COMMERCE · CONFIDENTIAL',
-    description: '맞춤형 댄스화의 상품 탐색부터 옵션 구성, 고객별 가격 계산, 주문 취합, ERP 판매주문과 관리자 운영까지 연결한 주문 서비스를 개발하고 있습니다.',
-    highlights: ['사용자 웹·관리자 시스템 기능 개발', 'Supabase 주문 데이터와 ECOUNT ERP 연동'],
-    skills: ['Next.js', 'React', 'TypeScript', 'Supabase', 'ECOUNT ERP'],
+    featured: true,
+    description: '맞춤형 댄스화의 상품 탐색부터 옵션 구성, 고객별 가격 계산, 주문 취합과 관리자 운영까지 이어지는 주문 서비스를 개발하고 있습니다.',
+    highlights: ['사용자 웹·관리자 시스템 기능 개발', '옵션·고객별 가격 계산 로직 구현', 'Supabase 주문 데이터·ECOUNT ERP 연동'],
+    skills: ['Next.js', 'React', 'TypeScript', 'Supabase', 'TanStack Query', 'Zustand', 'ECOUNT ERP'],
+  },
+  {
+    period: '2026.04.03—현재',
+    title: '하나은행 고도화',
+    context: '미디어포스 얼라이언스 · 고객사 파견',
+    label: 'FINANCE · CONFIDENTIAL',
+    featured: true,
+    description: 'React·TypeScript 환경의 기존 디자인 시스템과 공통 컴포넌트를 활용해 메인 홈과 보이스피싱 피해 서류 제출 페이지를 구현했습니다.',
+    highlights: ['공통 컴포넌트 기반 페이지 UI 구현', '페이지 단위 클라이언트 요청 반영', '금융 UI 가이드·웹 접근성·반응형 기준 준수'],
+    skills: ['React', 'TypeScript', 'SCSS', 'Design System', '웹 접근성', '반응형'],
   },
   {
     period: '2024.12.02—2025.07.17',

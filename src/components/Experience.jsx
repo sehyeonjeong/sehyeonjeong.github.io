@@ -6,13 +6,14 @@ export default function Experience() {
       <div className="shell">
         <div className="experience__heading">
           <div>
+            <p className="section-kicker">Selected Frontend Experience</p>
             <h2>Experience.</h2>
           </div>
-          <p>2023년부터 미디어포스 얼라이언스 소속으로 금융권 고객사 프로젝트를 수행하고 있으며, 별도 외주 프로젝트를 통해 프론트엔드 기능 개발 경험을 확장하고 있습니다.</p>
+          <p>React·TypeScript 기반 금융 UI와 Next.js 주문 서비스를 중심으로, 컴포넌트 구현부터 API·데이터 연동까지 담당합니다.</p>
         </div>
         <div className="experience__list">
           {experiences.map((experience) => (
-            <article className="experience-card" key={`${experience.period}-${experience.title}`}>
+            <article className={`experience-card${experience.featured ? ' is-featured' : ''}`} key={`${experience.period}-${experience.title}`}>
               <div className="experience-card__meta">
                 <p>{experience.period}</p>
                 <span>{experience.label}</span>

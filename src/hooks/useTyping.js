@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
 
 export default function useTyping(text, delay = 95) {
-  const [typed, setTyped] = useState('')
+  const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const [typed, setTyped] = useState(() => (prefersReducedMotion() ? text : ''))
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      return undefined
+    }
+
     let index = 0
     const timer = window.setInterval(() => {
       index += 1

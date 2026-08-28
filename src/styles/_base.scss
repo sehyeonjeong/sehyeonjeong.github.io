@@ -1,7 +1,5 @@
 @use 'tokens' as *;
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
-
 :root {
   font-family: $font-stack;
   color: $text-primary;
@@ -41,4 +39,21 @@ button {
 img {
   display: block;
   max-width: 100%;
+}
+
+.skip-link {
+  position: fixed;
+  top: .75rem;
+  left: .75rem;
+  z-index: 100;
+  padding: .75rem 1rem;
+  border-radius: 4px;
+  color: #1b1b1b;
+  background: #fff;
+  font-weight: 800;
+  transform: translateY(-200%);
+
+  &:focus {
+    transform: translateY(0);
+  }
 }
