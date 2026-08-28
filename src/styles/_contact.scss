@@ -1,0 +1,37 @@
+.contact {
+  display: grid;
+  min-height: 70svh;
+  place-items: center;
+  padding-block: clamp(6rem, 10vw, 10rem);
+  background: #181818;
+
+  &__inner {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -.04em;
+  }
+
+  &__inner > p:not(.section-kicker) {
+    margin: 1.5rem auto 0;
+    color: var(--muted);
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: 2rem;
+  }
+
+  &__button--secondary {
+    background: transparent;
+  }
+}

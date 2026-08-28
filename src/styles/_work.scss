@@ -1,6 +1,20 @@
 .work {
   overflow: hidden;
   background: var(--surface-dark);
+
+  &__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 32rem);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: end;
+
+    > p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+  }
 }
 
 .work-slider {
@@ -41,6 +55,7 @@
     }
 
     &.is-contained {
+      aspect-ratio: 1600 / 775;
       background: #111;
 
       img {
@@ -139,7 +154,14 @@
 }
 
 .swiper-pagination-bullet {
+  position: relative;
   background: #fff !important;
+
+  &::before {
+    position: absolute;
+    inset: -18px;
+    content: '';
+  }
 
   &-active {
     background: var(--accent) !important;

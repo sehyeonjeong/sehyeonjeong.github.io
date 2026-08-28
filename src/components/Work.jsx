@@ -9,10 +9,24 @@ export default function Work() {
   return (
     <section className="section work" id="work">
       <div className="shell">
-        <h2>Public Work.</h2>
+        <div className="work__heading">
+          <div>
+            <p className="section-kicker">Web UI Foundation</p>
+            <h2>Public Work.</h2>
+          </div>
+          <p>접근성·반응형·인터랙션 구현 역량의 기반이 된 공개 웹 UI 프로젝트입니다.</p>
+        </div>
         <Swiper
           className="work-slider"
           modules={[A11y, Keyboard, Navigation, Pagination]}
+          role="region"
+          aria-label="공개 웹 UI 프로젝트"
+          aria-roledescription="carousel"
+          a11y={{
+            prevSlideMessage: '이전 프로젝트',
+            nextSlideMessage: '다음 프로젝트',
+            paginationBulletMessage: '{{index}}번째 프로젝트로 이동',
+          }}
           navigation
           pagination={{ clickable: true }}
           keyboard={{ enabled: true }}
@@ -21,42 +35,44 @@ export default function Work() {
         >
           {works.map((work) => (
             <SwiperSlide key={work.title}>
-              <article className="work-card">
-                <div className={`work-card__media${work.imageFit === 'contain' ? ' is-contained' : ''}`}>
-                  <img
-                    src={imageUrl(work.image)}
-                    alt={`${work.title} 프로젝트 화면`}
-                    width={work.imageWidth}
-                    height={work.imageHeight}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div className="work-card__body">
-                  <div>
-                    {work.period && <p className="work-card__period">{work.period}</p>}
-                    <h3>{work.title}</h3>
-                    <p>{work.description}</p>
-                    {work.role && (
-                      <dl className="work-card__meta">
-                        <div>
-                          <dt>ROLE</dt>
-                          <dd>{work.role}</dd>
-                        </div>
-                      </dl>
-                    )}
-                    {work.highlights && (
-                      <ul className="work-card__highlights">
-                        {work.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
-                      </ul>
-                    )}
-                    <ul className="tags" aria-label="사용 기술">
-                      {work.skills.map((skill) => <li key={skill}>{skill}</li>)}
-                    </ul>
+              {({ isActive }) => (
+                <article className="work-card" aria-hidden={!isActive}>
+                  <div className={`work-card__media${work.imageFit === 'contain' ? ' is-contained' : ''}`}>
+                    <img
+                      src={imageUrl(work.image)}
+                      alt={`${work.title} 프로젝트 화면`}
+                      width={work.imageWidth}
+                      height={work.imageHeight}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
-                  <a className="button" href={work.href} target="_blank" rel="noreferrer">페이지 보기</a>
-                </div>
-              </article>
+                  <div className="work-card__body">
+                    <div>
+                      {work.period && <p className="work-card__period">{work.period}</p>}
+                      <h3>{work.title}</h3>
+                      <p>{work.description}</p>
+                      {work.role && (
+                        <dl className="work-card__meta">
+                          <div>
+                            <dt>ROLE</dt>
+                            <dd>{work.role}</dd>
+                          </div>
+                        </dl>
+                      )}
+                      {work.highlights && (
+                        <ul className="work-card__highlights">
+                          {work.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                        </ul>
+                      )}
+                      <ul className="tags" aria-label={`${work.title} 사용 기술`}>
+                        {work.skills.map((skill) => <li key={skill}>{skill}</li>)}
+                      </ul>
+                    </div>
+                    <a className="button" href={work.href} target="_blank" rel="noreferrer" tabIndex={isActive ? 0 : -1}>페이지 보기</a>
+                  </div>
+                </article>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>

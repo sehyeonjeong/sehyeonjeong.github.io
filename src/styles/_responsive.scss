@@ -7,6 +7,7 @@
 
   .about__grid,
   .experience__heading,
+  .work__heading,
   .work-card {
     grid-template-columns: 1fr;
   }
@@ -22,6 +23,19 @@
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    &__meta span,
+    &__context {
+      font-size: .75rem;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -42,9 +56,9 @@
     font-size: clamp(1.8rem, 9vw, 2.75rem);
   }
 
-  .experience-card {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .hero__actions .button,
+  .contact__actions .button {
+    width: min(100%, 190px);
   }
 
   .footer__inner {

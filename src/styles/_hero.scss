@@ -47,6 +47,15 @@
     margin-top: clamp(2.75rem, 6vh, 4.5rem);
   }
 
+  &__eyebrow {
+    margin: 0 0 .65rem;
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+
   &__actions {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +90,12 @@
   &__skills {
     color: #d0d0d0;
     font-size: .9rem;
+  }
+
+  &__foundation {
+    color: #9f9f9f;
+    font-size: .8rem;
+    font-weight: 600;
   }
 }
 
